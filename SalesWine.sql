@@ -1,9 +1,9 @@
 -- Borramos la base de datos SalesWine si es que existe
-		--USE MASTER
-		--DROP DATABASE IF EXISTS SalesWine
+		USE MASTER
+		DROP DATABASE IF EXISTS SalesWine
 --Crear base de datos GerichSoft
---CREATE DATABASE SalesWine
---GO
+CREATE DATABASE SalesWine
+GO
 
 --Definimos el formato de fecha
 SET DATEFORMAT dmy
@@ -92,15 +92,15 @@ GO
 INSERT INTO PERSONA
 (DNIPER, NOMPER, APEPER, EMAPER, CELPER, FECNACPER, TIPPER)
 VALUES
-('15288111', 'Adriana', 'V·squez Carranza', 'adriana.vasquez@saleswine.com', '991548789', '10/03/1985', 'C'),
+('15288111', 'Adriana', 'V√°squez Carranza', 'adriana.vasquez@saleswine.com', '991548789', '10/03/1985', 'C'),
 ('45781236', 'Carlos', 'Guerra Tasayco', 'carlos.guerra@saleswine.com','987845123', '20/10/1980','J'),
-('15263698', 'Daniel', 'Lombardi PÈrez', 'daniel.lombardi@saleswine.com','998523641', '06/06/1982','J'),
+('15263698', 'Daniel', 'Lombardi P√©rez', 'daniel.lombardi@saleswine.com','998523641', '06/06/1982','J'),
 ('45123698', 'Roberto', 'Palacios Castillo', 'roberto.palacios@saleswine.com','985236417', '15/10/1988','V'),
-('15264477', 'Carlos', 'Palomino Fern·ndez', 'carlos.palomino@saleswine.com','984512557', '30/01/1989','V'),
+('15264477', 'Carlos', 'Palomino Fern√°ndez', 'carlos.palomino@saleswine.com','984512557', '30/01/1989','V'),
 ('45127866', 'Fabricio', 'Rosales Zegarra', 'fabricio@yahoo.com','974815231', '02/03/1975','C'),
-('15487865', 'Rosaura', 'D·vila S·nchez', 'rosaurao@gmail.com','974815254', '16/06/1979','C'),
-('46632157', 'NoemÌ', 'Ju·rez MartÌnez', 'noemi.juarez@gmail.com','984525741', '25/09/1979','C'),
-('47258533', 'Issac', 'S·nchez Jobs', 'issac.sanchez@outlook.com','953625147', '30/10/1995','C'),
+('15487865', 'Rosaura', 'D√°vila S√°nchez', 'rosaurao@gmail.com','974815254', '16/06/1979','C'),
+('46632157', 'Noem√≠', 'Ju√°rez Mart√≠nez', 'noemi.juarez@gmail.com','984525741', '25/09/1979','C'),
+('47258533', 'Issac', 'S√°nchez Jobs', 'issac.sanchez@outlook.com','953625147', '30/10/1995','C'),
 ('15258544', 'Fabiana', 'Carrizales Campos', 'fabiana.carrizales@outlook.com','951144236', '05/04/1997','C'),
 ('44/12214', 'Valeria', 'Mendoza Solano', 'valeria.mendoza@yahoo.com','972544681', '06/06/1997','C')
 GO
@@ -112,14 +112,14 @@ VALUES
 ('P01','Ramos Pinto Porto','V','750','P','119.00','60'),
 ('P02','Santa Julia Cabernet','V','750','A','119.00','45'),
 ('P03','Pulenta Estate Cabernet Sauvignon','V','750','A','189.00','70'),
-('P04','La Rioja Alta ViÒa Alberdi','V','500','E','540.00','80'),
+('P04','La Rioja Alta Vi√±a Alberdi','V','500','E','540.00','80'),
 ('P05','Amayna Pinot Noir','V','750','C','774.00','100'),
 ('P06','Pisco Don Santiago Mosto Verde Italia','P','750','P','59.00','75'),
-('P07','Pisco PortÛn Mosto Verde Torontel','P','750','P','89.00','100'),
+('P07','Pisco Port√≥n Mosto Verde Torontel','P','750','P','89.00','100'),
 ('P08','Tequila Olmeca Blanco','T','500','M','54.00','85'),
 ('P09','Tequila Olmeca Reposado','T','750','M','54.00','85'),
 ('P10','Black Whiskey Don Michael','W','750','P','159.00','70'),
-('P11','Whisky Chivas Regal 12 AÒos','W','500','E','89.00','70')
+('P11','Whisky Chivas Regal 12 A√±os','W','500','E','89.00','70')
 GO
 
 --Insertar registros en la tabla VENTA
@@ -174,10 +174,10 @@ CASE TIPPRO
 	END AS PRODUCTO,
 CONCAT(VOLPRO,' ml.') AS VOLUMEN,
 CASE PAIPRO 
-	WHEN 'P' THEN 'Per˙'
+	WHEN 'P' THEN 'Per√∫'
 	WHEN 'A' THEN 'Argentina'
 	WHEN 'C' THEN 'Chile'
-	WHEN 'E' THEN 'EspaÒa'
+	WHEN 'E' THEN 'Espa√±a'
 	WHEN 'M' THEN 'Mexico'
 	END AS PAIS,
 	CONCAT('S/',PRODUCTO.PREPRO) AS PRECIO,
